@@ -54,8 +54,8 @@ int main()
         return -1;
     }
 
-    // listen
-    if (listen(serverSocket, 2) == SOCKET_ERROR) 
+    // listen (클라이언트 최대 2개만 받아들임)
+    if (listen(serverSocket, 2) == SOCKET_ERROR)
     {
         std::cout << "Listening failed.\n";
         closesocket(serverSocket);
@@ -69,7 +69,7 @@ int main()
     int clientLen2 = sizeof(clientAddr2);
 
     SOCKET clientSocket1 = accept(serverSocket, (sockaddr*)&clientAddr1, &clientLen1);
-    if (clientSocket1 == INVALID_SOCKET) 
+    if (clientSocket1 == INVALID_SOCKET)
     {
         std::cout << "Client 1 connection failed.\n";
         closesocket(serverSocket);

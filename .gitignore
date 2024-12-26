@@ -11,6 +11,7 @@
 *.sln
 *.vcxproj
 *.vcxproj.*
+Project3/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
